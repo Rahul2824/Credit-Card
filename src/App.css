@@ -1,0 +1,236 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    .navbar {
+        height: 80px;
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        background-color: blue;
+        border-radius: 15px;
+    }
+
+
+
+
+    .logo img {
+        height: 70px;
+        width: 70px;
+        object-fit: contain;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+    }
+
+    .menu h3 {
+        margin: 0;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .menu button {
+        height: 45px;
+        width: 120px;
+        color: white;
+        background-color: #05da2f;
+        cursor: pointer;
+        border-radius: 25px;
+        border: none;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .menu button:hover {
+        background-color: #04b927;
+    }
+
+    .content h2 {
+        color: rgb(28, 28, 182);
+        text-decoration: underline;
+
+    }
+
+    .content button {
+        height: 45px;
+        width: 120px;
+        color: white;
+        background-color: #05da2f;
+        cursor: pointer;
+        border-radius: 25px;
+        border: none;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .admin-text {
+        color: rgb(16, 16, 90);
+        text-decoration: underline;
+    }
+
+    .admin-text:hover {
+        color: antiquewhite;
+    }
+
+    .cointenar {
+        display: flex;
+        padding: 10px 30px;
+        justify-content: center;
+        gap: 150px;
+    }
+
+    .cointenar img {
+        height: 400px;
+        width: 400px;
+    }
+
+
+
+
+.info {
+    height: auto;
+    width: 90%;
+    background-color: #05075a;
+    color: rgba(255, 255, 255, 0.756);
+    padding: 50px 100px;
+    margin: 20px auto;
+    display: flex;
+    gap: 100px;
+    border-radius: 15px;
+}
+
+.info img {
+    height: 60px;
+    width: 60px;
+}
+
+.info-1 {
+    height: auto;
+    width: 400px;
+    font-size: small;
+}
+
+.info-2 {
+    height: auto;
+    width: 400px;
+    font-size: small;
+    border-left: 3px solid blue;
+    padding-left: 15px;
+}
+
+.info-2 h2 {
+    font-size: xx-large;
+
+
+}
+
+.info-3 h2 {
+    font-size: xx-large;
+
+
+}
+
+.info-3 {
+    height: auto;
+    width: 400px;
+    font-size: small;
+    border-left: 3px solid blue;
+    padding-left: 15px;
+}
+.box{
+    height:auto;
+    width: 500px;
+    background-color:rgb(242, 242, 242);
+   border-radius: 15px;
+}
+.content-1{
+   
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+  
+}
+.content-1 input{
+   width: 100%;
+   height: 50px;
+   border-bottom-color: brown;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   color: #05075a;
+}
+.content-1 input::placeholder{
+    color: #05075a;
+    font-size: small;
+ 
+}
+.content-1 button{
+  height: 50px;
+  width: 100%;
+ background-color: brown;
+ color: aliceblue;
+ border-radius: 15px;
+ border: none;
+  cursor: pointer;
+}
+.Disclaimer{
+    color: white;
+
+}
+
+.Disclaimer-box{
+    background-color: #0f119a;
+    padding: 20px;
+    border-radius: 15px;
+
+}
+.content-2{
+     height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+}
+.content-2 input{
+     width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid red;
+    background-color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 10px;
+    outline: none;
+    margin-bottom: 25px;
+    
+}
+.box-2{
+     height: 500px;
+    width: 500px;
+    background-color:rgb(242, 242, 242);
+   border-radius: 15px;
+   display: flex;
+   justify-content: center;
+}
+.content-2 button{
+  height: 50px;
+  width: 100%;
+ background-color: brown;
+ color: aliceblue;
+ border-radius: 15px;
+ border: none;
+ cursor: pointer;
+}
+}
