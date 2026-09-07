@@ -1,11 +1,12 @@
+
 import { Link } from "react-router-dom";
 import Logo from './Logo.jpg'
 function Sucess() {
     return(
         <>
             <div className="navbar">
-                <div className="logo">
-                    <img src="://encrypted-tbn0.gstatihttpsc.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" />
+                 <div className="logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" />
                 </div>
                 <div className="menu">
                     <h3>Home</h3>
@@ -24,7 +25,7 @@ function Sucess() {
     ✓
   </div>
 
-  <h1>Process Completed!</h1>
+  <h1>Process Completed!</h1>   
 
   <p>
     Your request has been successfully completed.
@@ -34,7 +35,7 @@ function Sucess() {
     <span>Transaction ID</span>
     <strong>XXXXXXXX</strong>
   </div>
-
+       <Link to="/"> <button className="Home-button">Home</button></Link> 
 </div>
 <div className="info">
           <div className="Disclaimer-box">

@@ -32,7 +32,7 @@ function Contact() {
                          <input type="number" placeholder="Enter your Pancard number" style={{marginBottom:"30px"}} />                       
                         
                     <Link to="/Documeentuplod"><button>Save</button></Link>     
-                    </div>
+                    </div>  
                 </div>
                 <div className="credit-card">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPw6QezYZIql_T6LCIfZRYxMZJHhhwby2c23hyi4MrSA&s=10" alt="credit-card" />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Documeentuplod() {
     return(
         <>
@@ -32,7 +33,7 @@ function Documeentuplod() {
                          <h3>Uplod good quality picture of your work salary sleap</h3>
                          <input type="file"  style={{marginBottom:"30px"}} />                       
                         
-                         <button>Save</button>
+                    <Link to="/Sucess"><button>Save</button></Link>     
                     </div>
                 </div>
                 <div className="credit-card">
