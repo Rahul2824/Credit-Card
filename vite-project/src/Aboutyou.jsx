@@ -17,12 +17,12 @@ function Aboutyou() {
         adhar: adhar
       };
 
-      const result = await axios.post(
-        "http://localhost:5000/api/users",
-        userData
-      );
+   const result = await axios.post(
+  "http://localhost:5000/api/users",
+  userData
+);
 
-      console.log(result.data);
+console.log(result.data);
       alert("Data Saved Successfully");
     } catch (error) {
       console.log(error);
@@ -99,7 +99,7 @@ function Aboutyou() {
 
         <div className="credit-card">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPw6QezYZIql_T6LCIfZRYMZJHhhwby2c23hyi4MrSA&s=10"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPw6QezYZIql_T6LCIfZRYxMZJHhhwby2c23hyi4MrSA&s=10"
             alt="credit-card"
           />
         </div>

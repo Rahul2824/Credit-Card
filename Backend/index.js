@@ -1,13 +1,10 @@
 const dns = require("dns");
-
-// Google DNS + IPv4
 dns.setServers(["8.8.8.8"]);
 dns.setDefaultResultOrder("ipv4first");
 
 const express = require("express");
-const mongoose = require("mongoose");
+const { MongoClient } = require("mongodb");
 const cors = require("cors");
-
 require("dotenv").config();
 
 const app = express();
@@ -15,73 +12,65 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URL)
-  .then(() => {
-    console.log("✅ MongoDB Atlas Connected Successfully!");
-  })
-  .catch((error) => {
-    console.log("❌ MongoDB Connection Failed!");
-    console.log(error.message);
-  });
+const url = process.env.MONGO_URL;
+const client = new MongoClient(url);
 
+const dbname = "api";
+const collectionname = "users";
 
-// Schema
-const userSchema = new mongoose.Schema({
-  name: String,
-  dob: String,
-  gender: String,
-  adhar: String,
-  country: String
-});
+async function connection() {
+  await client.connect();
+  
+  const db = client.db(dbname);
+  return db;
+}
 
-
-// Model
-const User = mongoose.model("User", userSchema);
-
-
-// POST API
-app.post("/api/users", async (req, res) => {
+app.post("/api/users", async (req, resp) => {
   try {
+    const db = await connection();
 
-    const user = new User(req.body);
+    const collection = db.collection(collectionname);
 
-    await user.save();
+    const result = await collection.insertOne(req.body);
 
-    res.json({
+    console.log(result);
+
+    resp.status(201).json({
       message: "Data saved successfully",
-      user: user
+      result: result
     });
 
   } catch (error) {
+    console.log(error);
 
-    res.status(500).json({
-      message: error.message
+    resp.status(500).json({
+      message: "Data save failed",
+      error: error.message
     });
-
   }
 });
 
-
-// GET API
-app.get("/api/users", async (req, res) => {
+app.get("/api/users", async (req, resp) => {
   try {
+    const db = await connection();
 
-    const users = await User.find();
+    const collection = db.collection(collectionname);
 
-    res.json(users);
+    const data = await collection.find().toArray();
+
+    console.log(data);
+
+    resp.json(data);
 
   } catch (error) {
+    console.log(error);
 
-    res.status(500).json({
+    resp.status(500).json({
       message: error.message
     });
-
   }
 });
 
-
-// Server
 app.listen(5000, () => {
-  console.log("🚀 Server running on port 5000");
+  console.log("Server running on port 5000");
 });
