@@ -32,9 +32,10 @@ app.post("/api/users", async (req, resp) => {
     const collection = db.collection(collectionname);
 
     const result = await collection.insertOne(req.body);
-
+    const data = await collection.find().toArray();
     console.log(result);
-
+  console.log(data);
+  
     resp.status(201).json({
       message: "Data saved successfully",
       result: result

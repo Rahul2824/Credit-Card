@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 function Aboutyou() {
-  const [task, setTask] = useState("");
+  const [name, setname] = useState("");
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [adhar, setAdhar] = useState("");
@@ -11,18 +11,22 @@ function Aboutyou() {
   const handleSubmit = async () => {
     try {
       const userData = {
-        name: task,
+        name: name,
         dob: dob,
         gender: gender,
         adhar: adhar
       };
+    // Page/form cha data temporarily browser madhe save
+    
+    localStorage.setItem("Aboutyou", JSON.stringify(userData));
 
-   const result = await axios.post(
-  "http://localhost:5000/api/users",
-  userData
-);
 
-console.log(result.data);
+//    const result = await axios.post(
+//   "http://localhost:5000/api/users",
+//   userData
+// );
+
+// console.log(result.data);
       alert("Data Saved Successfully");
     } catch (error) {
       console.log(error);
@@ -60,7 +64,7 @@ console.log(result.data);
             <input
               type="text"
               placeholder="Enter your full name"
-              onChange={(e) => setTask(e.target.value)}
+              onChange={(e) => setname(e.target.value)}
             />
 
             <h3>Date of Birth</h3>

@@ -1,5 +1,30 @@
+// import axios from "axios";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
 function About() {
+    const [Adharname,setAdharname] = useState("")
+    const [number,setnumber] = useState("")
+    const [pancard,setpancard] = useState("")
+    const [kycid,setkycid] = useState("")
+
+    const handlesubmit = () => {
+  const userData = {
+    Adharname: Adharname,
+    number: number,
+    pancard: pancard,
+    kycid: kycid
+  };
+
+  localStorage.setItem(
+    "About",
+    JSON.stringify(userData)
+  );
+
+  console.log(userData);
+
+  alert("Data Saved Successfully");
+};
     return (
         <>
             <div className="navbar">
@@ -8,7 +33,7 @@ function About() {
                 </div>
                 <div className="menu">
                     <h3>Home</h3>
-                    <h3>product and services</h3>
+                    <h3>product and services</h3>~
                     <h3>About you</h3>
                     <h3>Contact us</h3>
                     <h3 className="admin-text">Admin Login</h3>
@@ -24,11 +49,11 @@ function About() {
 
                     <div className="content-1">
                         <h2>Let's get started!</h2>
-                        <input type="text" placeholder="Name as per Adhaar" /><br /><br />
-                        <input type="number" placeholder="Mobile number Linked to Adhaar" /><br /><br />
-                        <input type="number" placeholder="PAN" /><br /><br />
-                        <input type="number" placeholder="CKYC ID (Optional)" /><br /><br />
-                     <Link to="/OTP"><button>Generate OTP</button></Link> 
+                        <input type="text" placeholder="Name as per Adhaar" onChange={(e)=>setAdharname(e.target.value)} /><br /><br />
+                        <input type="number" placeholder="Mobile number Linked to Adhaar" onChange={(e)=>setnumber(e.target.value)} /><br /><br />
+                        <input type="number" placeholder="PAN" onChange={(e)=>setpancard(e.target.value)} /><br /><br />
+                        <input type="number" placeholder="CKYC ID (Optional)" onChange={(e)=>setkycid(e.target.value)} /><br /><br />
+                     <Link to="/OTP"><button onClick={handlesubmit}>Generate OTP</button></Link> 
                     </div>
                 </div>
                 <div className="credit-card">
