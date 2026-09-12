@@ -1,4 +1,5 @@
 const dns = require("dns");
+
 dns.setServers(["8.8.8.8"]);
 dns.setDefaultResultOrder("ipv4first");
 
@@ -12,17 +13,27 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const PORT = process.env.PORT || 5000;
+
 const url = process.env.MONGO_URL;
+
 const client = new MongoClient(url);
 
 const dbname = "api";
 const collectionname = "users";
 
 async function connection() {
-  await client.connect();
-  
-  const db = client.db(dbname);
-  return db;
+  try {
+    await client.connect();
+
+    console.log("MongoDB Connected Successfully");
+
+    const db = client.db(dbname);
+
+    return db;
+  } catch (error) {
+    console.log("MongoDB Connection Error:", error);
+  }
 }
 
 app.post("/api/users", async (req, resp) => {

@@ -8,6 +8,7 @@ import Location from "./Location";
 import Contact from "./Contact";
 import Documeentuplod from "./Documentuplod"
 import Sucess from "./Sucess"
+import Info from "./Info";
 function App() {
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Contact" element={<Contact/>}/>
         <Route path="/Documeentuplod" element={<Documeentuplod/>}/>
         <Route path="/Sucess" element={<Sucess/>}/>
+        <Route path="/Info" element={<Info/>}/>
       </Routes>
 
 

@@ -9,11 +9,11 @@ function Sucess() {
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" />
                 </div>
                 <div className="menu">
-                    <h3>Home</h3>
-                    <h3>product and services</h3>
-                    <h3>About you</h3>
-                    <h3>Contact us</h3>
-                    <h3 className="admin-text">Admin Login</h3>
+                   <Link to="/"> <h3 style={{color:"black",textDecoration: "none"}}>Home</h3></Link>           
+     <Link to="/Logine"><h3 style={{color:"black",textDecoration: "none"}}>Logine</h3></Link>   
+     <Link to="/Aboutyou"><h3 style={{color:"black",textDecoration: "none"}}>About you</h3></Link>   
+      <Link to="/Contact"><h3 style={{color:"black",textDecoration: "none"}}>Contact us</h3></Link>
+     <Link to="/Info"><h3 className="admin-text">Admin Login</h3></Link>   
                     <button>self-sign-up</button>
                 </div>
             </div>

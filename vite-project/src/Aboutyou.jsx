@@ -7,6 +7,7 @@ function Aboutyou() {
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [adhar, setAdhar] = useState("");
+  const [country, setcountry] = useState("");
 
   const handleSubmit = async () => {
     try {
@@ -14,7 +15,8 @@ function Aboutyou() {
         name: name,
         dob: dob,
         gender: gender,
-        adhar: adhar
+        adhar: adhar,
+        country:country
       };
     // Page/form cha data temporarily browser madhe save
     
@@ -45,11 +47,11 @@ function Aboutyou() {
         </div>
 
         <div className="menu">
-          <h3>Home</h3>
-          <h3>product and services</h3>
-          <h3>About you</h3>
-          <h3>Contact us</h3>
-          <h3 className="admin-text">Admin Login</h3>
+         <Link to="/"> <h3 style={{color:"black",textDecoration: "none"}}>Home</h3></Link>           
+     <Link to="/Logine"><h3 style={{color:"black",textDecoration: "none"}}>Logine</h3></Link>   
+     <Link to="/Aboutyou"><h3 style={{color:"black",textDecoration: "none"}}>About you</h3></Link>   
+      <Link to="/Contact"><h3 style={{color:"black",textDecoration: "none"}}>Contact us</h3></Link>
+     <Link to="/Info"><h3 className="admin-text">Admin Login</h3></Link>   
           <button>self-sign-up</button>
         </div>
       </div>
@@ -91,6 +93,7 @@ function Aboutyou() {
             <input
               type="text"
               placeholder="INDIA"
+              onChange={(e)=>setcountry(e.target.value)}
               style={{ marginBottom: "30px" }}
             />
 
