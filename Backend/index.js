@@ -17,43 +17,50 @@ const PORT = process.env.PORT || 5000;
 
 const url = process.env.MONGO_URL;
 
+if (!url) {
+  console.log("MONGO_URL is missing");
+  process.exit(1);
+}
+
 const client = new MongoClient(url);
 
 const dbname = "api";
 const collectionname = "users";
 
+let db;
+
+// MongoDB connection
 async function connection() {
   try {
     await client.connect();
 
     console.log("MongoDB Connected Successfully");
 
-    const db = client.db(dbname);
+    db = client.db(dbname);
 
     return db;
   } catch (error) {
     console.log("MongoDB Connection Error:", error);
+    throw error;
   }
 }
 
+// POST
 app.post("/api/users", async (req, resp) => {
   try {
-    const db = await connection();
-
     const collection = db.collection(collectionname);
 
     const result = await collection.insertOne(req.body);
-    const data = await collection.find().toArray();
-    console.log(result);
-  console.log(data);
-  
+
+    console.log("Inserted:", result);
+
     resp.status(201).json({
       message: "Data saved successfully",
       result: result
     });
 
   } catch (error) {
-    console.log(error);
+    console.log("POST Error:", error);
 
     resp.status(500).json({
       message: "Data save failed",
@@ -62,20 +69,19 @@ app.post("/api/users", async (req, resp) => {
   }
 });
 
+// GET
 app.get("/api/users", async (req, resp) => {
   try {
-    const db = await connection();
-
     const collection = db.collection(collectionname);
 
     const data = await collection.find().toArray();
 
-    console.log(data);
+    console.log("Users:", data);
 
-    resp.json(data);
+    resp.status(200).json(data);
 
   } catch (error) {
-    console.log(error);
+    console.log("GET Error:", error);
 
     resp.status(500).json({
       message: error.message
@@ -83,6 +89,18 @@ app.get("/api/users", async (req, resp) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
+// Start server + connect MongoDB
+async function startServer() {
+  try {
+    await connection();
+
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+
+  } catch (error) {
+    console.log("Server failed to start:", error);
+  }
+}
+
+startServer();
