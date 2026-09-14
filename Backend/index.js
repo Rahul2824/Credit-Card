@@ -27,8 +27,10 @@ async function connection() {
     const db = client.db(dbname);
 
     return db;
+
   } catch (error) {
     console.log("MongoDB Connection Error:", error);
+    throw error;
   }
 }
 
@@ -60,23 +62,27 @@ app.post("/api/users", async (req, resp) => {
 
 app.get("/api/users", async (req, resp) => {
   try {
+
     const db = await connection();
 
     const collection = db.collection(collectionname);
 
-    const data = await collection.find().toArray();
+    const data = await collection.find({}).toArray();
 
-    console.log(data);
+    console.log("DATA FROM MONGODB:", data);
 
-    resp.json(data);
+    resp.status(200).json(data);
 
   } catch (error) {
-    console.log(error);
+
+    console.log("GET ERROR:", error);
 
     resp.status(500).json({
-      message: error.message
+      message: "Data fetch failed",
+      error: error.message
     });
-  } 
+
+  }
 });
 
 app.listen(5000, () => {
