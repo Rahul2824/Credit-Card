@@ -8,16 +8,18 @@ function Info() {
     getUsers();
   }, []);
 
- const getUsers = async () => {
+const getUsers = async () => {
   try {
     const result = await axios.get(
-      "https://credit-card-production-415d.up.railway.app/api/users"
+      "http://localhost:5000/api/users"
     );
 
     console.log("API DATA:", result.data);
     console.log("IS ARRAY:", Array.isArray(result.data));
+    console.log("TOTAL USERS:", result.data.length);
 
     setUsers(result.data);
+
   } catch (error) {
     console.log("GET ERROR:", error);
   }
@@ -27,7 +29,7 @@ function Info() {
        <>
             <div className="info-navbar">
           <div className="logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" />
+            <img src="http://localhost:5000/api/users" alt="logo" />
           </div>
           <div className="menu">
                     <h3>Home</h3>
@@ -40,6 +42,7 @@ function Info() {
             </div>
             <div className="cointenar">
 <div className="user-data">
+  <h2>Total Users: {users.length}</h2>
    <table>
 
   <thead>

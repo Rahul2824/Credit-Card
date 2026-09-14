@@ -5,9 +5,11 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: "https://credit-card-git-main-rahul2824.vercel.app"
+}));
 
+app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 const url = process.env.MONGO_URL;
