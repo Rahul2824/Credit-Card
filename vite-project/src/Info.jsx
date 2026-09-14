@@ -10,9 +10,9 @@ function Info() {
 
 const getUsers = async () => {
   try {
-    const result = await axios.get(
-      "http://localhost:5000/api/users"
-    );
+   const result = await axios.get(
+  "https://credit-card-production-415d.up.railway.app/api/users"
+);
 
     console.log("API DATA:", result.data);
     console.log("IS ARRAY:", Array.isArray(result.data));
