@@ -1,4 +1,3 @@
-
 const express = require("express");
 const { MongoClient } = require("mongodb");
 const cors = require("cors");
@@ -34,24 +33,27 @@ async function connection() {
   }
 }
 
+
+// POST
 app.post("/api/users", async (req, resp) => {
   try {
+
     const db = await connection();
 
     const collection = db.collection(collectionname);
 
     const result = await collection.insertOne(req.body);
-    const data = await collection.find().toArray();
-    console.log(result);
-  console.log(data);
-  
+
+    console.log("INSERT RESULT:", result);
+
     resp.status(201).json({
       message: "Data saved successfully",
       result: result
     });
 
   } catch (error) {
-    console.log(error);
+
+    console.log("POST ERROR:", error);
 
     resp.status(500).json({
       message: "Data save failed",
@@ -60,8 +62,12 @@ app.post("/api/users", async (req, resp) => {
   }
 });
 
+
+// GET
 app.get("/api/users", async (req, resp) => {
   try {
+
+    console.log("GET /api/users called");
 
     const db = await connection();
 
@@ -85,6 +91,8 @@ app.get("/api/users", async (req, resp) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+
+// SERVER
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
