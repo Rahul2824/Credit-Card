@@ -11,7 +11,7 @@ function Info() {
   const getUsers = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:5000/api/users"
+        "https://credit-card-production-415d.up.railway.app/api/users"
       );
 
       setUsers(result.data);
