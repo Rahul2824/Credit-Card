@@ -29,7 +29,7 @@ const getUsers = async () => {
        <>
             <div className="info-navbar">
           <div className="logo">
-            <img src="http://localhost:5000/api/users" alt="logo" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" />
           </div>
           <div className="menu">
                     <h3>Home</h3>

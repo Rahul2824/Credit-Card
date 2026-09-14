@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import axios from "axios";
 
 function Aboutyou() {
   const [name, setname] = useState("");
@@ -17,18 +16,11 @@ function Aboutyou() {
         gender: gender,
         adhar: adhar,
         country:country
-      };
-    // Page/form cha data temporarily browser madhe save
-    
+      };    
     localStorage.setItem("Aboutyou", JSON.stringify(userData));
 
 
-//    const result = await axios.post(
-//   "http://localhost:5000/api/users",
-//   userData
-// );
 
-// console.log(result.data);
       alert("Data Saved Successfully");
     } catch (error) {
       console.log(error);
