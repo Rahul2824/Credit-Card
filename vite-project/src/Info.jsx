@@ -8,18 +8,20 @@ function Info() {
     getUsers();
   }, []);
 
-  const getUsers = async () => {
-    try {
-      const result = await axios.get(
-        "https://credit-card-production-415d.up.railway.app/api/users"
-      );
+ const getUsers = async () => {
+  try {
+    const result = await axios.get(
+      "https://credit-card-production-415d.up.railway.app/api/users"
+    );
 
-      setUsers(result.data);
+    console.log("API DATA:", result.data);
+    console.log("IS ARRAY:", Array.isArray(result.data));
 
-    } catch (error) {
-      console.log(error);
-    }
-  };
+    setUsers(result.data);
+  } catch (error) {
+    console.log("GET ERROR:", error);
+  }
+};
 
     return(
        <>
