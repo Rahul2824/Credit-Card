@@ -10,10 +10,7 @@ function Info() {
 
 const getUsers = async () => {
   try {
-   const result = await axios.get(
-  "https://credit-card-production-415d.up.railway.app/api/users"
-);
-
+   const result = await axios.get("https://kind-serenity-production-025c.up.railway.app/api/users")
     console.log("API DATA:", result.data);
     console.log("IS ARRAY:", Array.isArray(result.data));
     console.log("TOTAL USERS:", result.data.length);
