@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function About() {
+function Logine() {
     const [Adharname,setAdharname] = useState("")
     const [number,setnumber] = useState("")
     const [pancard,setpancard] = useState("")
@@ -72,4 +72,4 @@ function About() {
         </>
     )
 }
-export default About;
+export default Logine;

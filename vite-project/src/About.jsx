@@ -19,8 +19,18 @@ function About() {
             </div>
 
 
-
+<div className="demo-warning">
+  <h3>College Project - Demo Only</h3>
+  <p>
+    This is a student project for educational purposes only.
+  </p>
+  <p>
+    Do not enter real Aadhaar, PAN, OTP, bank or credit-card information.
+    Use dummy data only.
+  </p>
+</div>
             <div className="cointenar">
+              
 <div className="content">
     <h2>SELF SIGN-UP</h2>
     <h1>Welcome</h1>

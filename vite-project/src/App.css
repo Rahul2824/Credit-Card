@@ -28,7 +28,28 @@ body {
         background-color: blue;
         border-radius: 15px;
     }
+.demo-warning {
+  width: 90%;
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 18px 25px;
+  box-sizing: border-box;
+  background: #fff8e1;
+  border: 1px solid #e0b84c;
+  border-radius: 10px;
+  text-align: center;
+}
 
+.demo-warning h3 {
+  margin: 0 0 8px;
+  color: #7a5500;
+}
+
+.demo-warning p {
+  margin: 5px 0;
+  color: #444;
+  font-size: 14px;
+}
     .logo img {
         height: 70px;
         width: 70px;
