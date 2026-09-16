@@ -30,6 +30,7 @@ function Aboutyou() {
 
   return (
     <>
+     <div className="fullbody">
       <div className="navbar">
         <div className="logo">
           <img
@@ -115,6 +116,7 @@ function Aboutyou() {
             </h5>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

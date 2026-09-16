@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 function About() {
     return(
        <>
+       <div className="fullbody">
             <div className="navbar">
           <div className="logo">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" />
@@ -37,26 +38,19 @@ function About() {
             </div></div>
 
 
-           <div className="info">
-    <div className="info-1">
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" /> <br />
-      <h3> IMB Financial Services Pty Ltd, is an authorised br Financial Services Provider (FSP43443) and an authorised co-branded partner of Flexpay Pty Ltd, Reg. No. 2007/007066/07, an authorised distribution channel of Access Bank South Africa Limited, Reg. No.: 1947/025414/06 an authorised Financial Services Provider (FSP 5865).</h3>
+            <div className="info">
+        <div className="Disclaimer-box">
+          <div className="Disclaimer">
+            <h5>
+              Disclaimer <br />
+              IMB BANK will NEVER ask you to reveal your User ID or Password.
+              Therefore, never disclose your credentials (User ID, Password,
+              OTP, PIN etc.) to anyone either through mail or over phone.
+            </h5>
+          </div>
+        </div>
+      </div>
 </div>
-<div className="info-2">
-    <h2>Products</h2>
-    <h3>- IMP personal package</h3>
-    <h3>- remittance (coming soon)</h3>
-    <h3>Affordeable Distrubution</h3>
-</div>
-<div className="info-3">
-    <h2>Get in touch</h2>
-    🌐︎Address: <br />
-    123,MG Road,<br />
-    pune,maharastra-411001<br />
-    India<br />
-</div>
-           </div>
-
        </>  
     )
 }

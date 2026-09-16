@@ -26,7 +26,7 @@ function About() {
   alert("Data Saved Successfully");
 };
     return (
-        <>
+        <> <div className="fullbody">
             <div className="navbar">
                 <div className="logo">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" />
@@ -53,7 +53,7 @@ function About() {
                         <input type="number" placeholder="Mobile number Linked to Adhaar" onChange={(e)=>setnumber(e.target.value)} /><br /><br />
                         <input type="number" placeholder="PAN" onChange={(e)=>setpancard(e.target.value)} /><br /><br />
                         <input type="number" placeholder="CKYC ID (Optional)" onChange={(e)=>setkycid(e.target.value)} /><br /><br />
-                     <Link to="/OTP"><button onClick={handlesubmit}>Generate OTP</button></Link> 
+                     <Link to="/OTP"><button onClick={handlesubmit}>Generate OTP</button></Link> <br /><br />
                     </div>
                 </div>
                 <div className="credit-card">
@@ -66,7 +66,9 @@ function About() {
                     <h5>Disclaimer <br />
                         IMB BANK will NEVER ask you to reveal your User ID or Password. Therefore, never disclose your credentials (User ID, Password, OTP, PIN etc.) to anyone either through mail or over phone. If you receive any mail asking you to update or authenticate your User ID or Password, please DO NOT fall into the trap of putting in your Password or OTP or PIN.</h5>
                 
-            </div></div></div>
+            </div></div>
+            </div>
+            </div>
         </>
     )
 }

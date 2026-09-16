@@ -14,7 +14,6 @@ const getUsers = async () => {
     console.log("API DATA:", result.data);
     console.log("IS ARRAY:", Array.isArray(result.data));
     console.log("TOTAL USERS:", result.data.length);
-
     setUsers(result.data);
 
   } catch (error) {
@@ -23,7 +22,7 @@ const getUsers = async () => {
 };
 
     return(
-       <>
+       <> <div className="fullbody">
             <div className="info-navbar">
           <div className="logo">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" />
@@ -114,6 +113,7 @@ const getUsers = async () => {
     pune,maharastra-411001<br />
     India<br />
 </div>
+           </div>
            </div>
 
        </>  
