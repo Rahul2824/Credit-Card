@@ -53,7 +53,7 @@ function About() {
           <div className="Disclaimer">
             <h5>
               Disclaimer <br />
-              IMB BANK will NEVER ask you to reveal your User ID or Password.
+              XYZ BANK will NEVER ask you to reveal your User ID or Password.
               Therefore, never disclose your credentials (User ID, Password,
               OTP, PIN etc.) to anyone either through mail or over phone.
             </h5>

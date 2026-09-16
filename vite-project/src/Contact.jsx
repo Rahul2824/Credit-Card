@@ -91,7 +91,7 @@ const handlesubmit = async () => {
                         <Link to="/Documeentuplod"><button onClick={handlesubmit}>Save</button></Link>
                     </div>
                 </div>
-                <div className="credit-card">
+                <div className="credit-carSd">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPw6QezYZIql_T6LCIfZRYxMZJHhhwby2c23hyi4MrSA&s=10" alt="credit-card" />
                 </div></div>
             <div className="info">
@@ -99,7 +99,7 @@ const handlesubmit = async () => {
                     <div className="Disclaimer">
 
                         <h5>Disclaimer <br />
-                            IMB BANK will NEVER ask you to reveal your User ID or Password. Therefore, never disclose your credentials (User ID, Password, OTP, PIN etc.) to anyone either through mail or over phone. If you receive any mail asking you to update or authenticate your User ID or Password, please DO NOT fall into the trap of putting in your Password or OTP or PIN.</h5>
+                            XYZ BANK will NEVER ask you to reveal your User ID or Password. Therefore, never disclose your credentials (User ID, Password, OTP, PIN etc.) to anyone either through mail or over phone. If you receive any mail asking you to update or authenticate your User ID or Password, please DO NOT fall into the trap of putting in your Password or OTP or PIN.</h5>
 
                     </div></div>
                     </div>

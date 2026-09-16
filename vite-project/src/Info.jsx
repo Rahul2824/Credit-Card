@@ -98,7 +98,7 @@ const getUsers = async () => {
            <div className="info">
     <div className="info-1">
          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFfZC-nidsr1Axr4YAldAiX5bVLmtIOZma6A&s" alt="logo" /> <br />
-      <h3> IMB Financial Services Pty Ltd, is an authorised br Financial Services Provider (FSP43443) and an authorised co-branded partner of Flexpay Pty Ltd, Reg. No. 2007/007066/07, an authorised distribution channel of Access Bank South Africa Limited, Reg. No.: 1947/025414/06 an authorised Financial Services Provider (FSP 5865).</h3>
+      <h3> XYZ Financial Services Pty Ltd, is an authorised br Financial Services Provider (FSP43443) and an authorised co-branded partner of Flexpay Pty Ltd, Reg. No. 2007/007066/07, an authorised distribution channel of Access Bank South Africa Limited, Reg. No.: 1947/025414/06 an authorised Financial Services Provider (FSP 5865).</h3>
 </div>
 <div className="info-2">
     <h2>Products</h2>
