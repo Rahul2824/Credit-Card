@@ -63,6 +63,32 @@ app.get("/api/users", async (req, resp) => {
     });
   }
 });
+app.post("/api/users", async (req, resp) => {
+  try {
+    const db = await connection();
+
+    const collection = db.collection(collectionname);
+
+    const userData = req.body;
+
+    console.log("DATA RECEIVED:", userData);
+
+    const result = await collection.insertOne(userData);
+
+    resp.status(201).json({
+      message: "Data saved successfully",
+      insertedId: result.insertedId
+    });
+
+  } catch (error) {
+    console.log("POST ERROR:", error);
+
+    resp.status(500).json({
+      message: "Data save failed",
+      error: error.message
+    });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
