@@ -44,8 +44,10 @@ const handlesubmit = async () => {
     console.log(finalData);
 
     // MongoDB मध्ये save
-    const result = await axios.post( "https://kind-serenity-production-025c.up.railway.app/api/users",finalData );
-
+const result = await axios.post(
+  "https://credit-card-production-7ace.up.railway.app/api/users",
+  finalData
+);
     console.log(result.data);
 
     alert("All Data Saved Successfully");

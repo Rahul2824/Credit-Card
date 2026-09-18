@@ -10,8 +10,12 @@ require("dotenv").config();
 
 const app = express();
 
+// CORS
 app.use(cors({
-  origin: "https://credit-card-git-main-rahul2824.vercel.app"
+  origin: [
+    "http://localhost:5173",
+    "https://credit-card-git-main-rahul2824.vercel.app"
+  ]
 }));
 
 app.use(express.json());
