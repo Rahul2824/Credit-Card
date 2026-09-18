@@ -53,7 +53,7 @@ function About() {
           <div className="Disclaimer">
             <h5>
               Disclaimer <br />
-              XYZ BANK will NEVER ask you to reveal your User ID or Password.
+             Credit Card Management  will NEVER ask you to reveal your User ID or Password.
               Therefore, never disclose your credentials (User ID, Password,
               OTP, PIN etc.) to anyone either through mail or over phone.
             </h5>

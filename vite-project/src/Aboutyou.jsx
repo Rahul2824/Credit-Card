@@ -78,7 +78,7 @@ function Aboutyou() {
             <h3>Adhar number</h3>
             <input
               type="text"
-              placeholder="Enter your Adhar number"
+              placeholder="Demo ID Number"
               onChange={(e) => setAdhar(e.target.value)}
             />
 
@@ -110,7 +110,7 @@ function Aboutyou() {
           <div className="Disclaimer">
             <h5>
               Disclaimer <br />
-              IMB BANK will NEVER ask you to reveal your User ID or Password.
+             Credit Card Management  will NEVER ask you to reveal your User ID or Password.
               Therefore, never disclose your credentials (User ID, Password,
               OTP, PIN etc.) to anyone either through mail or over phone.
             </h5>
