@@ -134,7 +134,7 @@ body {
         gap: 100px;
         border-radius: 15px;
     }
-
+    
     .info img {
         height: 60px;
         width: 60px;
@@ -419,6 +419,40 @@ body {
         background-color: blue;
         border-radius: 15px;
     }
+  .cointenar {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .user-data {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .user-data h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  /* Table */
+  .user-data table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+  }
+
+  .user-data th,
+  .user-data td {
+    padding: 8px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .user-data th {
+    font-size: 12px;
+  }
 
 @media (max-width: 768px) {
 
@@ -495,4 +529,76 @@ body {
         width: 90%;
         box-sizing: border-box;
     }
+    
+     .cointenar {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .user-data {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .user-data h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  /* Table */
+  .user-data table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+  }
+
+  .user-data th,
+  .user-data td {
+    padding: 8px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .user-data th {
+    font-size: 12px;
+  }
+
+  /* Bottom information section */
+  .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+
+  .info-1,
+  .info-2,
+  .info-3 {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .info-1 img {
+    width: 100px;
+    height: auto;
+  }
+
+  .info h2 {
+    font-size: 20px;
+  }
+
+  .info h3 {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .info-3 {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+   
 }
