@@ -83,11 +83,11 @@ const result = await axios.post(
 
                     <div className="content-1">
                         <h2>Where Do you live!</h2>
-                        <h3>Email Adress</h3>
+                        <h3>Email ID</h3>
                         <input type="email" placeholder="Enter your Email Adress" onChange={(e) => setemail(e.target.value)} />
-                        <h3>Phone number</h3>
+                        <h3>Phone No.</h3>
                         <input type="number" placeholder="Enter your Phone number" onChange={(e) => setphonenumber(e.target.value)} />
-                        <h3>Pancard number</h3>
+                        <h3>Pan No.</h3>
                         <input type="number" placeholder="Enter your Pancard number" style={{ marginBottom: "30px" }} onChange={(e) => setpancardnumber(e.target.value)} />
 
                         <Link to="/Documeentuplod"><button onClick={handlesubmit}>Save</button></Link>

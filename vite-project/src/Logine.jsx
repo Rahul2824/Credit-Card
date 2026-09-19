@@ -49,8 +49,8 @@ function Logine() {
 
                     <div className="content-1">
                         <h2>Let's get started!</h2>
-                        <input type="text" placeholder="Name as per Adhaar" onChange={(e)=>setAdharname(e.target.value)} /><br /><br />
-                        <input type="number" placeholder="Mobile number Linked to Adhaar" onChange={(e)=>setnumber(e.target.value)} /><br /><br />
+                        <input type="text" placeholder="Name " onChange={(e)=>setAdharname(e.target.value)} /><br /><br />
+                        <input type="number" placeholder="Mobile number" onChange={(e)=>setnumber(e.target.value)} /><br /><br />
                         <input type="number" placeholder="PAN" onChange={(e)=>setpancard(e.target.value)} /><br /><br />
                         <input type="number" placeholder="CKYC ID (Optional)" onChange={(e)=>setkycid(e.target.value)} /><br /><br />
                      <Link to="/OTP"><button onClick={handlesubmit}>Generate OTP</button></Link> <br /><br />
