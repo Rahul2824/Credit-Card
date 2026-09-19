@@ -14,7 +14,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://credit-card-git-main-rahul2824.vercel.app"
+    "https://credit-card-ygak.onrender.com"
   ]
 }));
 
