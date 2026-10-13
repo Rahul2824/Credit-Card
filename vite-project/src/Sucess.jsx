@@ -30,6 +30,7 @@ function Sucess() {
   <p>
     Your request has been successfully completed.
   </p>
+  <p>Have a nice day byyy</p>
 
   <div className="transaction-box">
     <span>Transaction ID</span>
